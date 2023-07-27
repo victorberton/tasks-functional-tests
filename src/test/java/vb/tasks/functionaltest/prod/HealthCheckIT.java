@@ -12,6 +12,8 @@ public class HealthCheckIT {
 
 	@Test
 	public void healthCheck() {
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\victor\\Jenkins\\seleniumDrivers\\chromedriver-win32\\chromedriver-win32\\chromedriver.exe");
+
 		WebDriver driver = new ChromeDriver();
 		try {
 			driver.navigate().to("http://192.168.100.18:9999/tasks");
