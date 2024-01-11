@@ -91,4 +91,29 @@ public class TasksTest {
 			driver.quit();
 		}
 	}
+	
+	@Test
+	public void removeTaskSuccessfully() {
+		WebDriver driver = accessWebsite();
+		
+		try {
+			driver.findElement(By.id("addTodo")).click();
+			
+			driver.findElement(By.id("task")).sendKeys("Teste Selenium");
+			
+			driver.findElement(By.id("dueDate")).sendKeys("20/10/2030");
+			
+			driver.findElement(By.id("saveButton")).click();
+			
+			String message = driver.findElement(By.id("message")).getText();
+			Assert.assertEquals("Success!", message);
+			
+			//remove
+			driver.findElement(By.xpath("//a[@class='btn btn-outline-danger btn-sm']")).click();
+			String message = driver.findElement(By.id("message")).getText();
+			Assert.assertEquals("Success!", message);
+		} finally {
+			driver.quit();
+		}
+	}
 }
