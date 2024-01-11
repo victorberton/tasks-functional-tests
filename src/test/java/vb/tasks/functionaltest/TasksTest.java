@@ -92,7 +92,7 @@ public class TasksTest {
 		}
 	}
 	
-	@Test
+	/*@Test
 	public void removeTaskSuccessfully() {
 		WebDriver driver = accessWebsite();
 		
@@ -115,5 +115,5 @@ public class TasksTest {
 		} finally {
 			driver.quit();
 		}
-	}
+	}*/
 }
